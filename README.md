@@ -1,3 +1,5 @@
+Application made during coding course on Pluralsight!
+
 React App with:
 
 - Node
@@ -6,3 +8,5 @@ React App with:
 - Flux
 - Bootstrap
 - Configured Mock Api
+
+Very professional, highly recommended for react developers!

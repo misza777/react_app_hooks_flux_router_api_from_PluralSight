@@ -1,9 +1,11 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 // import { Prompt } from "react-router-dom";
 import CourseForm from "./CourseForm";
-import * as courseApi from "../api/courseApi";
-import ToastContainer, { toast } from "react-toastify";
+import courseStore from "../stores/courseStore";
+
+// import * as courseApi from "../api/courseApi";
+import { toast } from "react-toastify";
+import * as courseActions from "../actions/courseActions";
 
 const ManageCoursePage = (props) => {
   //zarzadzanie bledami
@@ -37,7 +39,8 @@ const ManageCoursePage = (props) => {
     //from the path '/courses/:slug  - moze byc inna nazwa trzeba zmienic na roucie w app.js'
     if (slug) {
       //zwraca promis wiec then
-      courseApi.getCourseBySlug(slug).then((_course) => setCourse(_course));
+      //   courseApi.getCourseBySlug(slug).then((_course) => setCourse(_course));
+      setCourse(courseStore.getCourseBySlug(slug));
     }
   }, [props.match.params.slug]);
 
@@ -71,7 +74,10 @@ const ManageCoursePage = (props) => {
 
     //funkcja importowana z courseAPi zwraca promise
     // tutaj mozna uzyc redirect ale uzyjemy ruter history object
-    courseApi.saveCourse(course).then(() => {
+    // courseApi.saveCourse(course).then(() => {
+    //   props.history.push("/courses");
+
+    courseActions.saveCourse(course).then(() => {
       props.history.push("/courses");
       toast.success("Congratulations! Course saved.");
     });

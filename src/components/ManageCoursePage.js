@@ -10,6 +10,8 @@ import * as courseActions from "../actions/courseActions";
 const ManageCoursePage = (props) => {
   //zarzadzanie bledami
   const [errors, setErrors] = useState({});
+  // trzeba zaladaowac kursy przed info ze slug'a
+  const [courses, setCourses] = useState(courseStore.getCourses());
   const [course, setCourse] = useState({
     id: null,
     slug: "",
@@ -35,14 +37,26 @@ const ManageCoursePage = (props) => {
 
   //
   useEffect(() => {
+    //gdy courseStore change run onChange
+    courseStore.addChangeListener(onChange);
+
     const slug = props.match.params.slug;
     //from the path '/courses/:slug  - moze byc inna nazwa trzeba zmienic na roucie w app.js'
-    if (slug) {
+    if (courses.length === 0) {
+      courseActions.loadCourses();
+    } else if (slug) {
       //zwraca promis wiec then
       //   courseApi.getCourseBySlug(slug).then((_course) => setCourse(_course));
       setCourse(courseStore.getCourseBySlug(slug));
     }
-  }, [props.match.params.slug]);
+    //useEffect takze jest uruchaiany jak unmount wiec, clean up
+    return () => courseStore.removeChangeListener(onChange);
+    //jesli cokolwiek sie zmieni w tej tablicy rerun useEffect!!!
+  }, [courses.length, props.match.params.slug]);
+
+  const onChange = () => {
+    setCourses(courseStore.getCourses());
+  };
 
   function handleChange({ target }) {
     //computed property
@@ -81,7 +95,13 @@ const ManageCoursePage = (props) => {
       props.history.push("/courses");
       toast.success("Congratulations! Course saved.");
     });
-  };
+  // };
+
+  // courseActions.deleteCourse(id).then(() => {
+  //   props.history.push("/courses");
+  //   toast.danger("Congratulations! Course deleted.");
+  // });
+};
 
   //   debugger;
   //   console.log(props);

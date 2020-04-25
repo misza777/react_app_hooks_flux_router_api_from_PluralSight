@@ -1,7 +1,7 @@
 import { EventEmitter } from "events";
 import Dispatcher from "../appDispatcher";
 import actionTypes from "../actions/actionTypes";
-import { getCourses, getCourseBySlug } from "../api/courseApi";
+// import { getCourses, getCourseBySlug } from "../api/courseApi";
 
 const CHANGE_EVENT = "change";
 let _courses = [];
@@ -37,13 +37,29 @@ Dispatcher.register((action) => {
       //anytime the store changes, we need to call emitChange
       store.emitChange();
       break;
-    case actionTypes.LOAD_COURSES:
-      _courses = action.course;
+    case actionTypes.UPDATE_COURSE:
+      _courses = _courses.map((course) =>
+        course.id === action.course.id ? action.course : course
+      );
       store.emitChange();
       break;
+    case actionTypes.DELETE_COURSE:
+      //to moze byc string wiec dla bezpieczenstwa dajemy paseinta
+      _courses = _courses.filter(
+        (course) => course.id !== parseInt(action.id, 10)
+      );
+      store.emitChange();
+      break;
+    case actionTypes.LOAD_COURSES:
+      _courses = action.courses;
+      store.emitChange();
+      break;
+
     default:
     //nothing to do here
   }
 });
+
+//mapowanie - tworzenie nowej tablicy!!!
 
 export default store;

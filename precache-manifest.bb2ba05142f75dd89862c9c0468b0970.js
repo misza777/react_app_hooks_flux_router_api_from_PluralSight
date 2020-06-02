@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1c8a952ee8b0ede2a42e6269225d5181",
+    "revision": "27d67a83fb7995322adfb31f78963773",
     "url": "/react_app_hooks_flux_router_api_from_PluralSight/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react_app_hooks_flux_router_api_from_PluralSight/static/js/2.509adbe3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6fabbf05cb80869398f8",
-    "url": "/react_app_hooks_flux_router_api_from_PluralSight/static/js/main.b83ff8ee.chunk.js"
+    "revision": "d90558081584e12cf7d9",
+    "url": "/react_app_hooks_flux_router_api_from_PluralSight/static/js/main.1295c920.chunk.js"
   },
   {
     "revision": "6fbc32adbc17e198c93c",

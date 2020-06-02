@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/react_app_hooks_flux_router_api_from_PluralSight/precache-manifest.61a07fc752f244cc940319020890c957.js"
+  "/react_app_hooks_flux_router_api_from_PluralSight/precache-manifest.bb2ba05142f75dd89862c9c0468b0970.js"
 );
 
 self.addEventListener('message', (event) => {

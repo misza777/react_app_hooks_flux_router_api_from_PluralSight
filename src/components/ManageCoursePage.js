@@ -76,6 +76,7 @@ const ManageCoursePage = (props) => {
 
     setErrors(_errors);
     //Form is valid if the errors object has no properties daje false:)
+    //ale return true jak dlugosc obiektu jest rowna 0
     return Object.keys(_errors).length === 0;
   };
 
@@ -95,13 +96,7 @@ const ManageCoursePage = (props) => {
       props.history.push("/courses");
       toast.success("Congratulations! Course saved.");
     });
-  // };
-
-  // courseActions.deleteCourse(id).then(() => {
-  //   props.history.push("/courses");
-  //   toast.danger("Congratulations! Course deleted.");
-  // });
-};
+  };
 
   //   debugger;
   //   console.log(props);

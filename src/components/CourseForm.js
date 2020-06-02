@@ -29,7 +29,7 @@ const CourseForm = (props) => {
           >
             <option value="" />
             <option value="1">Misza Grishakishvili</option>
-            <option value="1">Grisza Miszakishvili</option>
+            <option value="2">Grisza Miszakishvili</option>
           </select>
         </div>
         {props.errors.authorId && (

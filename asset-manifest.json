@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.js": "/react_app_hooks_flux_router_api_from_PluralSight/static/js/main.b83ff8ee.chunk.js",
+    "main.js.map": "/react_app_hooks_flux_router_api_from_PluralSight/static/js/main.b83ff8ee.chunk.js.map",
+    "runtime-main.js": "/react_app_hooks_flux_router_api_from_PluralSight/static/js/runtime-main.b0013cf7.js",
+    "runtime-main.js.map": "/react_app_hooks_flux_router_api_from_PluralSight/static/js/runtime-main.b0013cf7.js.map",
+    "static/css/2.d8b55213.chunk.css": "/react_app_hooks_flux_router_api_from_PluralSight/static/css/2.d8b55213.chunk.css",
+    "static/js/2.509adbe3.chunk.js": "/react_app_hooks_flux_router_api_from_PluralSight/static/js/2.509adbe3.chunk.js",
+    "static/js/2.509adbe3.chunk.js.map": "/react_app_hooks_flux_router_api_from_PluralSight/static/js/2.509adbe3.chunk.js.map",
+    "index.html": "/react_app_hooks_flux_router_api_from_PluralSight/index.html",
+    "precache-manifest.61a07fc752f244cc940319020890c957.js": "/react_app_hooks_flux_router_api_from_PluralSight/precache-manifest.61a07fc752f244cc940319020890c957.js",
+    "service-worker.js": "/react_app_hooks_flux_router_api_from_PluralSight/service-worker.js",
+    "static/css/2.d8b55213.chunk.css.map": "/react_app_hooks_flux_router_api_from_PluralSight/static/css/2.d8b55213.chunk.css.map",
+    "static/js/2.509adbe3.chunk.js.LICENSE.txt": "/react_app_hooks_flux_router_api_from_PluralSight/static/js/2.509adbe3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b0013cf7.js",
+    "static/css/2.d8b55213.chunk.css",
+    "static/js/2.509adbe3.chunk.js",
+    "static/js/main.b83ff8ee.chunk.js"
+  ]
+}
